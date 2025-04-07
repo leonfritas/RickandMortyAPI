@@ -19,8 +19,8 @@ export default function Home() {
               link="episodes"
             />
             <Card 
-              name="Locales"
-              link="locales"
+              name="Locations"
+              link="locations"
             />            
         </div>        
     </>

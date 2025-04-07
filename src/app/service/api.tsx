@@ -1,28 +1,14 @@
 
 let baseUrl = "https://rickandmortyapi.com/api/"
 
-async function getRAMAPIOptions(){
-    const response = await fetch(baseUrl)
-    return response.json();
-}
+// interface getRAMAPITypes{
+//     path: string;
+// }
 
-async function getRAMAPICharacter(){
-    const response = await fetch(`${baseUrl}character`)
-    return response.json();
-}
-
-async function getRAMAPILocation(){
-    const response = await fetch(`${baseUrl}location`)
-    return response.json();
-}
-
-async function getRAMAPIEpisode(){
-    const response = await fetch(`${baseUrl}episode`)
+async function getRAMAPI(path: string){
+    const response = await fetch(`${baseUrl}${path}`)
     return response.json();
 }
 
 
-
-
-
-export { getRAMAPIOptions, getRAMAPICharacter, getRAMAPILocation, getRAMAPIEpisode }
+export { getRAMAPI }
